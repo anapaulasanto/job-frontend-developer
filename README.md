@@ -50,8 +50,7 @@ Aplicação de notícias que permite buscar uma notícia por meio do autor ou do
 1. Clone o repositório:
 2. Abra o terminal e execute o seguinte comando para clonar o repositório: `git clone https://github.com/anapaulasanto/job-frontend-developer.git`
 2. Navegue até o diretório do projeto: `cd test-news`
-3. Instale as dependências:
-npm install
+3. Instale as dependências:`npm install`
 4. Inicie o projeto: `npm run dev`
 
 <h2> 💻 Autor</h2>
