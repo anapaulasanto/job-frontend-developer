@@ -1,13 +1,18 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import News from './pages/News';
 
 function App() {
   
   return (
     <>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-       
+      <BrowserRouter>
+        <div className='flex flex-col justify-center items-center bg-zinc-100'>
+          <Routes>
+            <Route path='/' element={<News />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   )
 }
