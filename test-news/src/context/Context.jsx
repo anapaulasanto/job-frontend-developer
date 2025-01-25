@@ -24,6 +24,7 @@ export const Provider = ({ children }) => {
             if (articles.length > 0) {
                 setNews(articles);
                 navigate("/results");
+                setHasSearchResults(true);
             } else {
                 console.log("Erro ao pegar dados da api");
                 setHasSearchResults(false);
