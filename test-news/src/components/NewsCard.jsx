@@ -15,9 +15,9 @@ export default function NewsCard({ recentNews }) {
     }
 
     return (
-        <div className='flex flex-col gap-10 justify-center items-center '>
+        <div className='flex flex-col gap-10 justify-center items-center'>
             {recentNews.map((item) => (
-                <div className='flex self-start items-center gap-4 cursor-pointer' key={item.title} onClick={() => newDetails(item)}>
+                <div className='flex self-start items-center gap-4 cursor-pointer w-11/12'  key={item.title} onClick={() => newDetails(item)}>
                     <div className='w-2/5'>
                         <img className='rounded-md h-60 w-full object-cover mx-auto' src={item.urlToImage} alt={item.title} />
                     </div>
