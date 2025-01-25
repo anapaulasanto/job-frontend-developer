@@ -20,31 +20,31 @@ Aplicação de notícias que permite buscar uma notícia por meio do autor ou do
 ## 🚀 Funcionalidades
   
 ### Requisitos Funcinais
-- [ ] Deve ser possível listar as notícias mais recentes em ordem cronológica;
-- [ ] Deve ser possível listar as notícias com `thumbnail`, `heading`, `description`, `author`, `image`, `category` e `source`;
-- [ ] Deve ser possível acessar a notícia pelo `slug`;
-- [ ] Deve ser possível o usuário buscar notícias desejada pelo `heading`;
-- [ ] Deve ser possível o usuário buscar notícia por `author`;
-- [ ] Deve ser possível o usuário ler uma notícia;
-- [ ] Deve ser possível salvar um `id` da notíca lida;
+- [x] Deve ser possível listar as notícias mais recentes em ordem cronológica;
+- [x] Deve ser possível listar as notícias com `thumbnail`, `heading`, `description`, `author`, `image`, `category` e `source`;
+- [x] Deve ser possível acessar a notícia pelo `slug`;
+- [x] Deve ser possível o usuário buscar notícias desejada pelo `heading`;
+- [x] Deve ser possível o usuário buscar notícia por `author`;
+- [x] Deve ser possível o usuário ler uma notícia;
+- [x] Deve ser possível salvar um `id` da notíca lida;
       
 ### Regras de negócio
-- [ ] O usuário não pode ler mais que 2 vezes a mesma notícia;
-- [ ] O usuário não pode ler uma notícia com o JavaScript desabilitado;
-- [ ] O usuário não pode ler uma notícia em modo anônimo;
-- [ ] O usuário não poderá acessar uma página de categoria;
-- [ ] O usuário não poderá acessar uma página de author;
+- [x] O usuário não pode ler mais que 2 vezes a mesma notícia;
+- [x] O usuário não pode ler uma notícia com o JavaScript desabilitado;
+- [x] O usuário não pode ler uma notícia em modo anônimo;
+- [x] O usuário não poderá acessar uma página de categoria;
+- [x] O usuário não poderá acessar uma página de author;
 - [ ] O usuário deverá ser redirecionado para página principal quando tentar acessar a página de categoria;
       
 ### Requisitos não-funcionais
-- [ ] Dynamic Routes: o `slug` da notícida deve ser: `/[category]/[heading]-[id]`
-- [ ] O `id` da notícia lida precisam estar persistidos em `localStorage`;
+- [x] Dynamic Routes: o `slug` da notícida deve ser: `/[category]/[heading]-[id]`
+- [x] O `id` da notícia lida precisam estar persistidos em `localStorage`;
 - [ ] O `id` da notícia persistida em `localStorage`, deve ser retornado quando passado o nome da chave `articles_read`;
-- [ ] A lista de notícias deve estar paginadas com 20 itens por página;
-- [ ] A lista de notícias deve exibir as últimas notícias em ordem cronológica;
-- [ ] O usuário com JavaScript desabilitado no Browser deverá ser direcionado para page-block;
-- [ ] O usuário em aba anônimo no Browser deverá ser direcionado para page-block;
-- [ ] O usuário com mais de 10 leituras diferentes deverá ser direcionado para page-block;
+- [x] A lista de notícias deve estar paginadas com 20 itens por página;
+- [x] A lista de notícias deve exibir as últimas notícias em ordem cronológica;
+- [x] O usuário com JavaScript desabilitado no Browser deverá ser direcionado para page-block;
+- [x] O usuário em aba anônimo no Browser deverá ser direcionado para page-block;
+- [x] O usuário com mais de 10 leituras diferentes deverá ser direcionado para page-block;
 
 ## 🛠 Instalação 
 1. Clone o repositório:
