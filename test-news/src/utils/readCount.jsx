@@ -10,8 +10,7 @@ function readCount(item, navigate) {
     const currentViews = viewedNews[item.title] || 0;
 
     if (currentViews >= 2) {
-        console.log('ja leu duas vezes');
-        
+        navigate(`/block`, { state: 'Você já leu essa notícia duas vezes, que tal outra?' });
     } else {
         viewedNews[item.title] = currentViews + 1;
         localStorage.setItem("viewedNews", JSON.stringify(viewedNews));

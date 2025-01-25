@@ -4,6 +4,7 @@ import { Provider } from './context/Context';
 import Results from './pages/Results';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details';
+import PageBlock from './pages/PageBlock';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
             <Route path='/results' element={<Results />} />
             <Route path='/notFound' element={<NotFound />} />
             <Route path='/details/everything/:slug' element={<Details />} />
+            <Route path='/block' element={<PageBlock />} />
           </Routes>
         </div>
       </BrowserRouter>
