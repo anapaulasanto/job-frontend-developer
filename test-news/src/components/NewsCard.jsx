@@ -1,20 +1,16 @@
 import img from '../assets/Author.png'
 import { formatDate } from '../utils/shared/Date'
 import { useNavigate } from "react-router-dom";
-import generateId from '../utils/shared/Id';
-import generateHeading from '../utils/shared/Heading';
+import readCount from '../utils/readCount'
 
 export default function NewsCard({ recentNews }) {
     const navigate = useNavigate();
 
-    function newDetails(item) {
-        const heading = generateHeading(item.title);
-        const id = generateId();
-
+    function newDetails(item) {     
         try {
-            navigate(`details/everything/${heading}-${id})`, { state: item })
+            readCount(item, navigate);
         } catch (err) {
-            console.log('Não foi pro details', err);
+            console.log('Não foi pro readCount', err);
         }
     }
 
