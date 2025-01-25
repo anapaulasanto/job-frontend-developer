@@ -3,6 +3,7 @@ import News from './pages/News';
 import { Provider } from './context/Context';
 import Results from './pages/Results';
 import NotFound from './pages/NotFound';
+import Details from './pages/Details';
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
             <Route path='/' element={<News />} />
             <Route path='/results' element={<Results />} />
             <Route path='/notFound' element={<NotFound />} />
+            <Route path='/details' element={<Details />} />
           </Routes>
         </div>
       </BrowserRouter>

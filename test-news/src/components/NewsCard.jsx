@@ -1,11 +1,22 @@
 import img from '../assets/Author.png'
 import { formatDate } from '../utils/shared/Date'
+import { useNavigate } from "react-router-dom";
 
 export default function NewsCard({ recentNews }) {
+    const navigate = useNavigate();
+
+    function newDetails() {
+        try {
+            navigate('/details')
+        } catch (err) {
+            console.log('Não foi pro details', err);
+        }
+    }
+
     return (
         <div className='flex flex-col gap-10 justify-center items-center '>
             {recentNews.map((item) => (
-                <div className='flex self-start items-center gap-4 cursor-pointer' key={item.title}>
+                <div className='flex self-start items-center gap-4 cursor-pointer' key={item.title} onClick={newDetails}>
                     <div className='min-w-80'>
                         <img className='rounded-md h-60 object-cover mx-auto' src={item.urlToImage} alt={item.title} />
                     </div>
