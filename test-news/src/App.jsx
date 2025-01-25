@@ -5,7 +5,6 @@ import Results from './pages/Results';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details';
 import PageBlock from './pages/PageBlock';
-import CheckIncognito from './utils/anonymous';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Provider>
         <BrowserRouter>
           <div className='flex flex-col justify-center items-center bg-color'>
-            <CheckIncognito />
             <Routes>
               <Route path='/' element={<News />} />
               <Route path='/results' element={<Results />} />
