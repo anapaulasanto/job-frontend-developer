@@ -10,22 +10,22 @@ import CheckIncognito from './utils/anonymous';
 function App() {
   return (
     <>
-      <CheckIncognito />
       <Provider>
-      <BrowserRouter>
-        <div className='flex flex-col justify-center items-center bg-color'>
-          <Routes>
-            <Route path='/' element={<News />} />
-            <Route path='/results' element={<Results />} />
-            <Route path='/notFound' element={<NotFound />} />
-            <Route path='/details/everything/:slug' element={<Details />} />
-            <Route path='/block' element={<PageBlock />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+        <BrowserRouter>
+          <div className='flex flex-col justify-center items-center bg-color'>
+            <CheckIncognito />
+            <Routes>
+              <Route path='/' element={<News />} />
+              <Route path='/results' element={<Results />} />
+              <Route path='/notFound' element={<NotFound />} />
+              <Route path='/details/everything/:slug' element={<Details />} />
+              <Route path='/block' element={<PageBlock />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
       </Provider>
     </>
-    
+
   )
 }
 

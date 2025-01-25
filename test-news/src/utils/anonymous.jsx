@@ -33,7 +33,6 @@ const CheckIncognito = () => {
 
     return (
         <div>
-            <h1>Verificação de Modo Anônimo</h1>
             {isAnonymous === true && (
                 navigate('/block', {state: 'Parece que você está usando guia anônima.'})
             )}
