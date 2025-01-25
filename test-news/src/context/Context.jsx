@@ -13,8 +13,25 @@ export const Provider = ({ children }) => {
         setNews(dataView.data.articles)
     }
 
+    const handleSearch = async (ev, navigate, inputRef) => {
+        if (ev.key === "Enter") {
+            const search = inputRef.current.value;
+            const url = DataApi.urlSearch(search);
+            const data = await axios.get(url);
+            const articles = data.data.articles;
+
+            if (articles.length > 0) {
+                setNews(articles);
+                navigate("/results");
+            } else {
+                console.log("Erro ao pegar dados da api");
+                setHasSearchResults(false);
+            }
+        }
+    }
+
     return (
-        <Context.Provider value={{ news, setNews, handleView }}>
+        <Context.Provider value={{ news, setNews, handleView, handleSearch }}>
             {children}
         </Context.Provider>
     );
