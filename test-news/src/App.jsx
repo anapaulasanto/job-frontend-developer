@@ -5,11 +5,12 @@ import Results from './pages/Results';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details';
 import PageBlock from './pages/PageBlock';
+import CheckIncognito from './utils/anonymous';
 
 function App() {
-  
   return (
     <>
+      <CheckIncognito />
       <Provider>
       <BrowserRouter>
         <div className='flex flex-col justify-center items-center bg-color'>
