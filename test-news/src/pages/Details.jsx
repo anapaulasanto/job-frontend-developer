@@ -8,6 +8,8 @@ import { Context } from '../context/Context';
 export default function Details() {
     const location = useLocation();
     const newsDetails = location.state || {};
+    console.log(newsDetails);
+    
     const { hasSearchResults } = useContext(Context);
     const navigate = useNavigate();
 
