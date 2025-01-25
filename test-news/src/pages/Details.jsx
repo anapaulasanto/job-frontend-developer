@@ -1,14 +1,22 @@
 import NavResults from '../components/templates/NavResults'
 import Input from '../components/Input'
 import NewsCardDetails from '../components/NewsCardDetails'
-import { useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import { Context } from '../context/Context';
 
 export default function Details() {
     const location = useLocation();
     const newsDetails = location.state || {};
     const { hasSearchResults } = useContext(Context);
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (!newsDetails | !hasSearchResults) {
+            navigate("/notFound");
+        }
+    }, [newsDetails, hasSearchResults, navigate]);
 
     return (
         <>

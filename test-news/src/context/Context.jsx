@@ -33,7 +33,7 @@ export const Provider = ({ children }) => {
     }
 
     return (
-        <Context.Provider value={{ news, setNews, handleView, handleSearch, hasSearchResults }}>
+        <Context.Provider value={{ news, setNews, handleView, handleSearch, hasSearchResults, setHasSearchResults }}>
             {children}
         </Context.Provider>
     );

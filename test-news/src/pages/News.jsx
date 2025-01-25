@@ -7,7 +7,7 @@ import { Context } from "../context/Context";
 import { useNavigate } from "react-router-dom";
 
 export default function News() {
-    const { news, handleView, hasSearchResults } = useContext(Context);
+    const { news, handleView, hasSearchResults, setHasSearchResults } = useContext(Context);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,6 +17,7 @@ export default function News() {
     useEffect(() => {
         if (!hasSearchResults) {
             navigate("/notFound");
+            setHasSearchResults(true);
         }
     }, [hasSearchResults, navigate]);
 
