@@ -1,13 +1,18 @@
 import img from '../assets/Author.png'
 import { formatDate } from '../utils/shared/Date'
 import { useNavigate } from "react-router-dom";
+import generateId from '../utils/shared/Id';
+import generateHeading from '../utils/shared/Heading';
 
 export default function NewsCard({ recentNews }) {
     const navigate = useNavigate();
 
     function newDetails(item) {
+        const heading = generateHeading(item.title);
+        const id = generateId();
+
         try {
-            navigate('/details', { state: item })
+            navigate(`details/everything/${heading}-${id})`, { state: item })
         } catch (err) {
             console.log('Não foi pro details', err);
         }
@@ -25,7 +30,11 @@ export default function NewsCard({ recentNews }) {
                         <h1 className='w-2/3 title-color font-playfair text-2xl font-bold hover:text-gray-800'>{item.title}</h1>
                         <p className='w-3/5 font-roboto-condensed content-color text-sm'>{item.description}</p>
                         <div className='flex flex-grow gap-2 items-center w-2/3'>
-                            <img className='w-8 rounded-full' src={img} alt="" />
+                            {item.author ? (
+                                <img className='w-8 rounded-full' src={img} alt="Author" />
+                            ) : (
+                                <p></p>
+                            )}
                             <h3 className='text-xs font-bold font-poppins  content-color'>{item.author}</h3>
                             <p className='text-xs content-color font-poppins'>{formatDate(item.publishedAt)}</p>
                         </div>
