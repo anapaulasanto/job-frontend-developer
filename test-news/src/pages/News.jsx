@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Input from "../components/Input";
+import NewsList from "../components/NewsList";
 import Logo from "../components/templates/Logo";
 
 export default function News() {
@@ -8,6 +9,9 @@ export default function News() {
             <Logo />
             <Header />
             <Input />
+            <section>
+                <NewsList texto="últimas notícias" className='pt-11' />
+            </section>
         </div>
     )
 }
