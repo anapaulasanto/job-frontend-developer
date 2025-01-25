@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 export default function NewsCard({ recentNews }) {
     const navigate = useNavigate();
 
-    function newDetails() {
+    function newDetails(item) {
         try {
-            navigate('/details')
+            navigate('/details', { state: item })
         } catch (err) {
             console.log('Não foi pro details', err);
         }
@@ -16,7 +16,7 @@ export default function NewsCard({ recentNews }) {
     return (
         <div className='flex flex-col gap-10 justify-center items-center '>
             {recentNews.map((item) => (
-                <div className='flex self-start items-center gap-4 cursor-pointer' key={item.title} onClick={newDetails}>
+                <div className='flex self-start items-center gap-4 cursor-pointer' key={item.title} onClick={() => newDetails(item)}>
                     <div className='min-w-80'>
                         <img className='rounded-md h-60 object-cover mx-auto' src={item.urlToImage} alt={item.title} />
                     </div>
