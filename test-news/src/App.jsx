@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import News from './pages/News';
 import { Provider } from './context/Context';
 import Results from './pages/Results';
+import NotFound from './pages/NotFound';
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path='/' element={<News />} />
             <Route path='/results' element={<Results />} />
+            <Route path='/notFound' element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>

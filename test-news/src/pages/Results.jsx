@@ -1,11 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from '../context/Context'
 import NavResults from "../components/templates/NavResults";
 import Input from "../components/Input";
 import NewsList from "../components/NewsList";
+import { useNavigate } from "react-router-dom";
 
 export default function Results() {
     const { news, hasSearchResults } = useContext(Context);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!hasSearchResults) {
+            navigate("/notFound");
+        }
+    }, [hasSearchResults, navigate]);
 
     return (
         <>

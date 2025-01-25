@@ -6,6 +6,7 @@ export const Context = createContext();
 
 export const Provider = ({ children }) => {
     const [news, setNews] = useState([]);
+    const [hasSearchResults, setHasSearchResults] = useState(true);
 
     async function handleView() {
         const urlView = DataApi.urlView
@@ -31,7 +32,7 @@ export const Provider = ({ children }) => {
     }
 
     return (
-        <Context.Provider value={{ news, setNews, handleView, handleSearch }}>
+        <Context.Provider value={{ news, setNews, handleView, handleSearch, hasSearchResults }}>
             {children}
         </Context.Provider>
     );
