@@ -21,7 +21,7 @@ export default function NewsCard({ recentNews }) {
                     <div className='min-w-80'>
                         <img className='rounded-md h-60 object-cover mx-auto' src={item.urlToImage} alt={item.title} />
                     </div>
-                    <div className='flex flex-col gap-1 self-start w-full'>
+                    <div className='flex flex-col gap-2 self-start w-full'>
                         <p className='uppercase source-color font-bold text-xs font-roboto-condensed'>{item.source.name}</p>
                         <h1 className='w-2/3 title-color font-playfair text-2xl font-bold hover:text-gray-800'>{item.title}</h1>
                         <p className='w-3/5 font-roboto-condensed content-color text-sm'>{item.description}</p>
