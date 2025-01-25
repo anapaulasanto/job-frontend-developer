@@ -1,18 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <title>Technology news</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <title>Technology news</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      background-color: #F1F5F9;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+
+    .logo img {
+      width: 200px;
+      align-self: start;
+      margin: 10px auto;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #F1F5F9;
+      height: 100vh;
+    }
+
+    .dog img {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text p {
+      width: 70%;
+      text-align: center;
+      font-family: 'Poppins';
+    }
+
+    span {
+      color: #008B8B ;
+      font-size: 40px;
+      font-weight: bold;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <noscript>
+    <section>
+      <div class="dog">
+        <img src='./src/assets/js-disable.png' alt="Imagem de cachorro" />
+      </div>
+      <div class="text">
+        <span>Opss..</span>
+        <p>Parece que voce está com o JavaScript desabilitado. Habilite-o para cotinuar acessando nossos conteúdos. </p>
+      </div>
+    </section>
+  </noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

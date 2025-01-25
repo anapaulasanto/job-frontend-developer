@@ -12,14 +12,12 @@ export default function PageBlock() {
                 <div >
                     <NavResults />
                 </div>
-                <div className='w-full '>
-                </div>
             </header>
-            <section className='h-screen flex flex-col items-center gap-9'>
+            <section className='h-screen flex flex-col items-center gap-9 bg-white w-full'>
                 <img className='w-52 rounded-full' src={img} alt="Imagem de cachorro" />
                 <div className='flex flex-col items-center gap-4'>
                     <span className='text-4xl  source-color font-bold '>Opss..</span>
-                    <p className='text-center text-lg'>{dataDetails} </p>
+                    <p className='text-center text-lg font-bold'>{dataDetails} </p>
                 </div>
             </section>
         </>
