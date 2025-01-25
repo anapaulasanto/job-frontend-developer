@@ -8,13 +8,17 @@ import { Context } from "../context/Context";
 export default function News() {
     const { news, handleView } = useContext(Context);
 
+    useEffect(() => {
+        handleView()
+    }, [])
+
     return (
         <div className="flex flex-col justify-center items-center pb-11">
             <Logo />
             <Header />
             <Input />
             <section>
-                <NewsList texto="últimas notícias" className='pt-11' />
+                <NewsList news={news} texto="últimas notícias" className='pt-11' />
             </section>
         </div>
     )
